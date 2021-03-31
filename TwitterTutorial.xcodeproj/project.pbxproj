@@ -19,6 +19,7 @@
 		EE532AF5260F9A1A00DB1841 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE532AF4260F9A1A00DB1841 /* ConversationsController.swift */; };
 		EE74AD502611D3800093468F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE74AD4F2611D3800093468F /* LoginController.swift */; };
 		EE74AD542611EAC00093468F /* RegisterationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE74AD532611EAC00093468F /* RegisterationController.swift */; };
+		EE91FA5226149B5100E8565F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE91FA5126149B5100E8565F /* Utilities.swift */; };
 		EEBA161726121E3B00E3E200 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBA161626121E3B00E3E200 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		EE532AF4260F9A1A00DB1841 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		EE74AD4F2611D3800093468F /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		EE74AD532611EAC00093468F /* RegisterationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterationController.swift; sourceTree = "<group>"; };
+		EE91FA5126149B5100E8565F /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		EEBA161626121E3B00E3E200 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				EEBA161626121E3B00E3E200 /* Extension.swift */,
+				EE91FA5126149B5100E8565F /* Utilities.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			files = (
 				EE532AF2260F99F800DB1841 /* NotificationsController.swift in Sources */,
 				EE532AF5260F9A1A00DB1841 /* ConversationsController.swift in Sources */,
+				EE91FA5226149B5100E8565F /* Utilities.swift in Sources */,
 				EE532ACC260F6B0600DB1841 /* AppDelegate.swift in Sources */,
 				EE532AEF260F99D400DB1841 /* ExploreController.swift in Sources */,
 				EE532ACE260F6B0600DB1841 /* SceneDelegate.swift in Sources */,
