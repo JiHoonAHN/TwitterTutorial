@@ -28,8 +28,8 @@ class Utilities{
         let dividerView = UIView()
         dividerView.backgroundColor = .white
         view.addSubview(dividerView)
-        dividerView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor,right: view.rightAnchor,
-                           paddingLeft: 8,paddingBottom: 0.75)
+        dividerView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor,right: view.rightAnchor,paddingLeft: 8, paddingBottom: 0.75)
+        
         return view
     }
     func textField(withPlaceholder placeholder :String) -> UITextField{
