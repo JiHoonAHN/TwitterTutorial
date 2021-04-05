@@ -46,12 +46,19 @@ class LoginController: UIViewController{
         let button = UIButton(type: .system)
         button.setTitle("Log In", for: .normal)
         button.backgroundColor = .white
-        button.heightAnchor.constraint(lessThanOrEqualToConstant: 50).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
+    
+    private let dontHaveAccountButton: UIButton = {
+        let button = Utilities().attributedButton("Don't have an account ", " Sign Up")
+        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+        return button
+    }()
+    
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -63,6 +70,11 @@ class LoginController: UIViewController{
         print("Handle login here")
         
     }
+    @objc func handleShowSignUp(){
+        let controller = RegisterationController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
     // MARk: - Helpers
     
     func configureUI(){
@@ -81,6 +93,8 @@ class LoginController: UIViewController{
         view.addSubview(stack)
         
         stack.anchor(top: logoImageView.bottomAnchor,left: view.leftAnchor, right: view.rightAnchor, paddingLeft: 32, paddingRight: 32)
+        view.addSubview(dontHaveAccountButton)
+        dontHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: 40,paddingRight: 40)
     }
 
 }

@@ -28,11 +28,9 @@ class Utilities{
         let dividerView = UIView()
         dividerView.backgroundColor = .white
         view.addSubview(dividerView)
-        dividerView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor,right: view.rightAnchor,paddingLeft: 8, paddingBottom: 0.75)
-        let divider = UIView()
-        divider.backgroundColor = .white
-        view.addSubview(divider)
-        divider.anchor(left: view.leftAnchor, bottom: view.bottomAnchor)
+        dividerView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor,right: view.rightAnchor,paddingLeft: 8, height: 0.75)
+                        
+                        
         return view
     }
     func textField(withPlaceholder placeholder :String) -> UITextField{
@@ -40,7 +38,17 @@ class Utilities{
         tf.textColor = .white
         tf.font = UIFont.systemFont(ofSize: 16)
         tf.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        
         return tf
+    }
+    func attributedButton(_ firstPart: String, _ secondPart: String) -> UIButton{
+        let button = UIButton(type: .system)
+        
+        let attributedTitle = NSMutableAttributedString(string: firstPart, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16),NSAttributedString.Key.foregroundColor: UIColor.white])
+        attributedTitle.append(NSAttributedString(string: secondPart, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16),NSAttributedString.Key.foregroundColor: UIColor.white]))
+        
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        return button
     }
 
 }
