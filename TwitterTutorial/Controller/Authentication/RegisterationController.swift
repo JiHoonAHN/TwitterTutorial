@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterationController : UIViewController{
     //  MARK : - Properties
     private let imagePicker = UIImagePickerController()
-    
+    private var profileImage : UIImage?
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "plus_photo"), for: .normal)
@@ -59,7 +60,6 @@ class RegisterationController : UIViewController{
     
     private let userNameTextField: UITextField = {
         let tf = Utilities().textField(withPlaceholder: "User Name")
-        tf.isSecureTextEntry = true
         
         return tf
     }()
@@ -93,7 +93,28 @@ class RegisterationController : UIViewController{
         present(imagePicker, animated: true, completion: nil)
     }
     @objc func handleRegistration(){
-        
+        guard let profileImage = profileImage else {
+            print("DEBUG: Please select a profile image ..")
+            return
+        }
+        guard let email = emailTextField.text else {return}
+        guard let password = passwordTextField.text else {return}
+        guard let fullname = fullnameTextField.text else {return}
+        guard let username = userNameTextField.text else {return}
+
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            if let error = error{
+                print("DEBUG : Error is \(error.localizedDescription)")
+                return
+            }
+            guard let uid = result?.user.uid else {return}
+            
+            let value = ["email":email , "username" : username , "fullname": fullname]
+            let ref = Database.database().reference().child("users").child(uid)
+            ref.updateChildValues(value) { (error, ref) in
+                print("DEBUG : Successfully update user information..")
+            }
+        }
     }
     @objc func handleShowLogin(){
         navigationController?.popViewController(animated: true)
@@ -137,6 +158,7 @@ extension RegisterationController : UIImagePickerControllerDelegate, UINavigatio
         plusPhotoButton.imageView?.clipsToBounds = true
         plusPhotoButton.layer.borderColor = UIColor.white.cgColor
         plusPhotoButton.layer.borderWidth = 3
+        self.profileImage = profileImage
         
         self.plusPhotoButton.setImage(profileImage.withRenderingMode(.alwaysOriginal), for: .normal)
         dismiss(animated: true, completion: nil)
