@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		EE74AD502611D3800093468F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE74AD4F2611D3800093468F /* LoginController.swift */; };
 		EE74AD542611EAC00093468F /* RegisterationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE74AD532611EAC00093468F /* RegisterationController.swift */; };
 		EE91FA5226149B5100E8565F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE91FA5126149B5100E8565F /* Utilities.swift */; };
+		EEB3825C261C803200B8C8CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEB3825B261C803200B8C8CE /* GoogleService-Info.plist */; };
 		EEBA161726121E3B00E3E200 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBA161626121E3B00E3E200 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		EE74AD4F2611D3800093468F /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		EE74AD532611EAC00093468F /* RegisterationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterationController.swift; sourceTree = "<group>"; };
 		EE91FA5126149B5100E8565F /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		EEB3825B261C803200B8C8CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		EEBA161626121E3B00E3E200 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,7 +74,6 @@
 				916FF86A3C9824B12CC4AB07 /* Pods-TwitterTutorial.debug.xcconfig */,
 				258473ADF203609F31851CFB /* Pods-TwitterTutorial.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -105,6 +106,7 @@
 				EE532AE0260F8A5A00DB1841 /* Controller */,
 				EE532ACB260F6B0600DB1841 /* AppDelegate.swift */,
 				EE532ACD260F6B0600DB1841 /* SceneDelegate.swift */,
+				EEB3825B261C803200B8C8CE /* GoogleService-Info.plist */,
 				EE532AD1260F6B0600DB1841 /* Main.storyboard */,
 				EE532AD4260F6B0700DB1841 /* Assets.xcassets */,
 				EE532AD6260F6B0700DB1841 /* LaunchScreen.storyboard */,
@@ -232,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE532AD8260F6B0700DB1841 /* LaunchScreen.storyboard in Resources */,
+				EEB3825C261C803200B8C8CE /* GoogleService-Info.plist in Resources */,
 				EE532AD5260F6B0700DB1841 /* Assets.xcassets in Resources */,
 				EE532AD3260F6B0600DB1841 /* Main.storyboard in Resources */,
 			);
