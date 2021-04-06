@@ -91,7 +91,6 @@ class RegisterationController : UIViewController{
 
     @objc func handleAddProfilePhoto(){
         present(imagePicker, animated: true, completion: nil)
-        
     }
     @objc func handleRegistration(){
         
@@ -132,6 +131,14 @@ extension RegisterationController : UIImagePickerControllerDelegate, UINavigatio
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let profileImage = info[.editedImage] as? UIImage else {return}
         
-        self.plusPhotoButton.setImage(profileImage, for: .normal)
+        plusPhotoButton.layer.cornerRadius = 128/2
+        plusPhotoButton.layer.masksToBounds = true
+        plusPhotoButton.imageView?.contentMode = .scaleAspectFill
+        plusPhotoButton.imageView?.clipsToBounds = true
+        plusPhotoButton.layer.borderColor = UIColor.white.cgColor
+        plusPhotoButton.layer.borderWidth = 3
+        
+        self.plusPhotoButton.setImage(profileImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        dismiss(animated: true, completion: nil)
     }
 }
