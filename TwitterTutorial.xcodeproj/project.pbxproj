@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05693E11EEC7C1F4FC3B3CAE /* Pods_TwitterTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59BE2666B741B956EF3A3B5 /* Pods_TwitterTutorial.framework */; };
+		EE2273F7261DD0DA00DB2BBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2273F6261DD0DA00DB2BBA /* Constants.swift */; };
 		EE532ACC260F6B0600DB1841 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE532ACB260F6B0600DB1841 /* AppDelegate.swift */; };
 		EE532ACE260F6B0600DB1841 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE532ACD260F6B0600DB1841 /* SceneDelegate.swift */; };
 		EE532AD3260F6B0600DB1841 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE532AD1260F6B0600DB1841 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		258473ADF203609F31851CFB /* Pods-TwitterTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterTutorial.release.xcconfig"; path = "Target Support Files/Pods-TwitterTutorial/Pods-TwitterTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		916FF86A3C9824B12CC4AB07 /* Pods-TwitterTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterTutorial.debug.xcconfig"; path = "Target Support Files/Pods-TwitterTutorial/Pods-TwitterTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		C59BE2666B741B956EF3A3B5 /* Pods_TwitterTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE2273F6261DD0DA00DB2BBA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE532AC8260F6B0600DB1841 /* TwitterTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE532ACB260F6B0600DB1841 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE532ACD260F6B0600DB1841 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			children = (
 				EEBA161626121E3B00E3E200 /* Extension.swift */,
 				EE91FA5126149B5100E8565F /* Utilities.swift */,
+				EE2273F6261DD0DA00DB2BBA /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				EE74AD542611EAC00093468F /* RegisterationController.swift in Sources */,
 				EE532AE9260F8DC200DB1841 /* MainTabController.swift in Sources */,
 				EE532AEC260F998C00DB1841 /* FeedController.swift in Sources */,
+				EE2273F7261DD0DA00DB2BBA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
